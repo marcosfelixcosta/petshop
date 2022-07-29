@@ -32,8 +32,8 @@ public class PopulaDados {
 		
 		Produto p1 = new Produto(null,"Ração", 100.0);
 		Produto p2 = new Produto(null,"Sache", 80.0);
-		Produto p3 = new Produto(null,"Shampoo", 150.0);
-		Produto p4 = new Produto(null,"Vermefugo", 110.0);
+		Produto p3 = new Produto(null,"Vermefugo", 90.0);
+		Produto p4 = new Produto(null,"Shampoo", 150.0); 
 		
 		cat1.getProdutos().addAll(Arrays.asList(p1,p2));
 		cat2.getProdutos().addAll(Arrays.asList(p3,p4));
