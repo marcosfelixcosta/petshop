@@ -9,12 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.marcos.petshop.domain.Categoria;
+import com.marcos.petshop.domain.Cidade;
 import com.marcos.petshop.domain.Especie;
+import com.marcos.petshop.domain.Estado;
 import com.marcos.petshop.domain.Pet;
 import com.marcos.petshop.domain.Produto;
 import com.marcos.petshop.domain.Raca;
 import com.marcos.petshop.repository.CategoriaRepository;
+import com.marcos.petshop.repository.CidadeRepository;
 import com.marcos.petshop.repository.EspecieRepository;
+import com.marcos.petshop.repository.EstadoRepository;
 import com.marcos.petshop.repository.PetRepository;
 import com.marcos.petshop.repository.ProdutoRepository;
 import com.marcos.petshop.repository.RacaRepository;
@@ -36,6 +40,12 @@ public class PopulaDados {
 	
 	@Autowired
 	RacaRepository racaRepository;
+	
+	@Autowired
+	EstadoRepository estadoRepository;
+	
+	@Autowired
+	CidadeRepository cidadeRepository;
 	
 	
 	
@@ -82,7 +92,18 @@ public class PopulaDados {
 		
 		petRepository.saveAll(Arrays.asList(pet1,pet2,pet3));
 		
+		Estado est1 = new Estado(null, "Minas Gerais");		
+		Estado est2 = new Estado(null, "São Pualo");
 		
+		Cidade cid1 = new Cidade(null, "Belo Horizonte", est1);
+		Cidade cid2 = new Cidade(null, "Capelinha", est1);
+		Cidade cid3 = new Cidade(null, "São Paulo", est2);
+		
+		est1.getCidades().addAll(Arrays.asList(cid1,cid2));
+		est1.getCidades().addAll(Arrays.asList(cid3));
+		
+		estadoRepository.saveAll(Arrays.asList(est1,est2));
+		cidadeRepository.saveAll(Arrays.asList(cid1,cid2,cid3));
 		
 	}
 
