@@ -1,6 +1,8 @@
 package com.marcos.petshop.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -27,6 +29,7 @@ public class Cidade implements Serializable{
 	private Estado estado;
 	
 	
+	private List<Endereco> enderecos = new ArrayList<>();
 	
 	public Cidade() {
 		
