@@ -1,5 +1,8 @@
 package com.marcos.petshop.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Cliente extends Pessoa {
 
 	

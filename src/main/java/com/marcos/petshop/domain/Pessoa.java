@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -36,6 +37,7 @@ public class Pessoa implements Serializable{
 	@CollectionTable(name = "TELEFONE", joinColumns = @JoinColumn(name = "id_pessoa"))
 	private Set<String> telefones = new HashSet<>();
 	
+	@OneToMany(mappedBy = "pessoa")
 	private List<Endereco> endereco = new ArrayList<>();
 
 

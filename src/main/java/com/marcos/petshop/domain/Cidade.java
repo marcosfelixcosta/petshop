@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -28,7 +29,7 @@ public class Cidade implements Serializable{
 	@JoinColumn(name ="id_estado")
 	private Estado estado;
 	
-	
+	@OneToMany(mappedBy = "cidade")
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	public Cidade() {
@@ -81,6 +82,16 @@ public class Cidade implements Serializable{
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
+	}
+
+
+	public void setEnderecos(List<Endereco> enderecos) {
+		this.enderecos = enderecos;
 	}
 
 	
