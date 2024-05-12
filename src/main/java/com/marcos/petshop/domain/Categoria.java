@@ -35,8 +35,6 @@ public class Categoria implements Serializable{
 		this.nome = nome;
 	}
 	
-	
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -77,7 +75,5 @@ public class Categoria implements Serializable{
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
-	
-	  
 
 }
