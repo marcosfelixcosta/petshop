@@ -20,7 +20,6 @@ public class PessoaService {
 		 return obj.orElseThrow(() -> new ObjetoNaoEncontradoException("Objeto não encontrado. ID:" + id + ", Tipo:" + Pessoa.class.getName()) );
 	 
 	 }
-	 
-	 
+
 
 }
