@@ -59,8 +59,6 @@ public class PopulaDados {
 	EnderecoRepository enderecoRepository;
 	
 	
-	
-	
 	@PostConstruct
 	public void cadastrar() {
 		
