@@ -66,7 +66,6 @@ public class PopulaDados {
 		Categoria cat2 = new Categoria(null, "Remédio");
 		Categoria cat3 = new Categoria(null, "Cosmético");
 	
-		
 		Produto p1 = new Produto(null,"Ração", 100.0);
 		Produto p2 = new Produto(null,"Sache", 80.0);
 		Produto p3 = new Produto(null,"Vermefugo", 90.0);
